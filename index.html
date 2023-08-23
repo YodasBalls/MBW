@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mihir's Bath Water Shop</title>
+    <title>Mihir's Bath Water</title>
     <link rel="icon" type="image/x-icon" href="Screenshot_2023-08-22_223759_32x32.png">
     <style>
         /* Common Styles */
@@ -17,7 +17,7 @@
         header {
             background-color: black;
             color: white;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -153,21 +153,44 @@
         <a href="#purchase-section" class="cta-button">Shop Now</a>
     </section>
 
-    <section id="purchase-section">
-        <h2>Buy Mihir's Bath Water</h2>
-        <form action="process_order.php" method="post">
-            <label for="product">Select Product:</label>
-            <select id="product" name="product">
-                <option value="product1">Product 1</option>
-                <!-- Add more product options if needed -->
-            </select>
-            <br>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1">
-            <br>
-            <button type="submit" class="purchase-button">Add to Cart</button>
-        </form>
-    </section>
+<section id="purchase-section">
+    <h2>Buy Mihir's Bath Water</h2>
+    <form action="process_order.php" method="post">
+        <label for="product">Select Product:</label>
+        <select id="product" name="product">
+            <option value="devious">Mihir's Devious Bathe Water</option>
+            <option value="face">Mihir's Shave Water (Face)</option>
+            <option value="elsewhere">Mihir's Shave Water (Elsewhere :D)</option>
+            <!-- Add more product options if needed -->
+        </select>
+        <br>
+        <label for="size">Select Size:</label>
+        <select id="size" name="size">
+            <option value="1L">1L</option>
+            <option value="1.5L">1.5L</option>
+            <option value="3L">3L</option>
+            <option value="5L">5L</option>
+        </select>
+        <br>
+        <label for="quantity">Select Quantity:</label>
+        <select id="quantity" name="quantity">
+            <option value="1">1 bottle</option>
+            <option value="2">2 bottles</option>
+            <option value="3">3 bottles</option>
+            <option value="4">4 bottles</option>
+            <option value="5">5 bottles (max per customer)</option>
+        </select>
+        <br>
+        <button type="submit" class="purchase-button">Add to Cart</button>
+    </form>
+</section>
+
+        
+</section>
+
+
+
+
 
     <section class="power-of-friendship">
         <div class="power-of-friendship-content">
