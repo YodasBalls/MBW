@@ -15,8 +15,8 @@
         }
 
         header {
-            background-color: gold;
-            color: black;
+            background-color: Gold;
+            color: Black;
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -84,17 +84,24 @@
             cursor: pointer;
         }
 
-        /* Tilt Prism Font for First Heading */
-        .tilt-prism {
-            font-family: 'Tilt Prism', sans-serif;
+        /* Font for First Heading */
+        .Main-heading {
+            font-family: 'Arial', sans-serif;
         }
 
         /* Styling for "Power of Friendship" Section */
         .power-of-friendship {
             background-color: black;
             color: white;
-            padding: 100px 0;
+            padding: 70px 0;
             text-align: center;
+        }
+
+        .hygiene-importance {
+        background-color: black;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
         }
 
         /* Styling for Review Section */
@@ -113,7 +120,7 @@
             border-radius: 5px;
             text-align: left;
         }
-
+        
         /* Styling for Footer */
         footer {
             background-color: black;
@@ -129,16 +136,12 @@
             font-family: Arial, sans-serif;
         }
 
-        .mihirs-bath-water {
-            font-family: 'Tilt Prism', sans-serif;
-            font-size: 48px;
-        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap">
 </head>
 <body>
     <header>
-        <div class="logo">Mihir's Bath Water</div>
+        <div class="logo">MBW</div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#purchase-section">Shop</a></li>
@@ -148,7 +151,7 @@
     </header>
 
     <section class="hero" style="text-align: center; padding: 100px 0;">
-        <h1 class="tilt-prism">Welcome to <span class="mihirs-bath-water">Mihir's Bath Water</span> Shop</h1>
+        <h1 class="Main-heading">Welcome</h1>
         <p>Experience the luxury of handcrafted bathwater products.</p>
         <a href="#purchase-section" class="cta-button">Shop Now</a>
     </section>
@@ -166,19 +169,19 @@
         <br>
         <label for="size">Select Size:</label>
         <select id="size" name="size">
-            <option value="1L">1L</option>
-            <option value="1.5L">1.5L</option>
-            <option value="3L">3L</option>
-            <option value="5L">5L</option>
+            <option value="1L">600ml - $12.50</option>
+            <option value="1.5L">1L - $15.50</option>
+            <option value="3L">2L - $20.50</option>
+            <option value="5L">3.5L - $29.50</option>
         </select>
         <br>
         <label for="quantity">Select Quantity:</label>
         <select id="quantity" name="quantity">
-            <option value="1">1 bottle</option>
-            <option value="2">2 bottles</option>
-            <option value="3">3 bottles</option>
-            <option value="4">4 bottles</option>
-            <option value="5">5 bottles (max per customer)</option>
+            <option value="1">x1</option>
+            <option value="2">x2</option>
+            <option value="3">x3</option>
+            <option value="4">x4</option>
+            <option value="5">x5 (max per customer)</option>
         </select>
         <br>
         <button type="submit" class="purchase-button">Add to Cart</button>
@@ -189,16 +192,22 @@
 </section>
 
 
-
-
-
-    <section class="power-of-friendship">
+    <section    id="power-of-friendship" class="power-of-friendship">
         <div class="power-of-friendship-content">
             <h2>The Power of Friendship</h2>
             <p>At Mihir's Bath Water, we believe that friendship is a source of inspiration, joy, and strength. Our products are not just about bathwater; they symbolize the bonds that make life beautiful.</p>
             <p>Indulge in self-care, share our products with friends, and celebrate the magic of friendship.</p>
         </div>
     </section>
+    <section class="hygiene-importance">
+    <div class="hygiene-content">
+        <h2>The Importance of Good Hygiene</h2>
+        <p>At Mihir's Bath Water, we prioritize not only the luxurious experience but also the significance of good hygiene. Maintaining proper hygiene is essential for overall health and well-being.</p>
+        <p>Our handcrafted bathwater products are designed to not only provide a delightful bathing experience but also to promote cleanliness and freshness. By using our products, you're taking a step towards a healthier lifestyle.</p>
+        <p>Remember, good hygiene not only keeps you feeling great but also contributes to your confidence and self-esteem.</p>
+    </div>
+</section>
+
 
     <section class="reviews">
         <h2>Customer Reviews</h2>
