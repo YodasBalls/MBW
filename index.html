@@ -10,9 +10,7 @@
                 location.reload();
             }
         </script>
-
         <style>
-            /* Common Styles */
             body {
                 font-family: Arial, sans-serif;
                 background-color: black;
@@ -181,20 +179,6 @@
                 margin: 3px 0 !important;
             }
 
-            /* Position the lines closer together */
-            .line:nth-child(1) {
-                margin-bottom: 30px;
-            }
-
-            .sidebar.active .line:nth-child(1) {
-                transform: rotate(45deg);
-            }
-
-            .sidebar.active .line:nth-child(2) {
-                transform: rotate(-45deg);
-            }
-
-
             .burger-icon::before,
             .burger-icon::after {
                 content: "";
@@ -252,8 +236,6 @@
                 /* Prevent content from being hidden behind header */
             }
 
-            /* Existing styles ... */
-
             .sidebar-toggle-btn {
                 display: block;
                 position: fixed;
@@ -265,12 +247,7 @@
                 border: none;
                 cursor: pointer;
                 z-index: 9999;
-                /* Make sure the button is above other elements */
-            }
-
-            /* Rest of your existing CSS ... */
         </style>
-
     </head>
 
 
@@ -288,8 +265,8 @@
                 </div>
             </button>
         </header>
+            
 
-        <!-- Sidebar -->
         <div class="sidebar" id="sidebar">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -302,14 +279,11 @@
         <div class="content">
         </div>
 
-
-
         <section class="hero" style="text-align: center; padding: 100px 0;">
             <h1 class="Main-heading">Welcome</h1>
             <p>Experience the luxury of handcrafted bathwater products.</p>
             <a href="#purchase-section" class="cta-button">Shop Now</a>
         </section>
-
 
         <section id="power-of-friendship" class="power-of-friendship">
             <div class="power-of-friendship-content">
@@ -318,6 +292,7 @@
                 <p>Indulge in self-care, share our products with friends, and celebrate the magic of friendship.</p>
             </div>
         </section>
+
         <section class="hygiene-importance">
             <div class="hygiene-content">
                 <h2>The Importance of Good Hygiene</h2>
@@ -327,8 +302,6 @@
             </div>
         </section>
 
-
-
         <section id="purchase-section">
             <h2>Buy Mihir's Bath Water</h2>
             <form action="process_order.php" method="post">
@@ -337,39 +310,22 @@
                     <option value="devious">Mihir's Devious Bathe Water</option>
                     <option value="face">Mihir's Shave Water (Face shave)</option>
                     <option value="elsewhere">Mihir's Shave Water (Elsewhere shave :D)</option>
-                    <!-- Add more product options if needed -->
                 </select>
                 <br>
                 <label for="size">Select Size:</label>
                 <select id="size" name="size">
-                    <option value="1L">600ml - $12.50</option>
-                    <option value="1.5L">1L - $15.50</option>
-                    <option value="3L">2L - $20.50</option>
-                    <option value="5L">3.5L - $29.50</option>
+                    <option value="1L">600ml</option>
+                    <option value="1.5L">1L</option>
+                    <option value="2L">2L</option>
+                    <option value="3.5L">3.5L</option>
                 </select>
                 <br>
-                <label for="quantity">Select Quantity:</label>
-                <select id="quantity" name="quantity">
-                    <option value="1">x1</option>
-                    <option value="2">x2</option>
-                    <option value="3">x3</option>
-                    <option value="4">x4</option>
-                    <option value="5">x5 (max per customer)</option>
-                </select>
+                <span id="price"></span>
+                <label for="price">Price (AUD)</label>
                 <br>
                 <button type="submit" class="purchase-button">Add to Cart</button>
             </form>
         </section>
-
-
-        <script>
-            function toggleSidebar() {
-                const sidebar = document.getElementById("sidebar");
-                sidebar.classList.toggle("active");
-            }
-        </script>
-
-
 
         <section class="reviews">
             <h2>Customer Reviews</h2>
@@ -386,17 +342,51 @@
         <footer>
             <p>&copy; 2023 Mihir's Bath Water Shop. All rights reserved.</p>
         </footer>
-    </body>
-</html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>ai</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
 
+        <script>
+            // Function to update the product price
+            function updatePrice() {
+                const selectedProduct = document.getElementById("product").value;
+                const selectedSize = document.getElementById("size").value;
+
+                const priceMap = {
+                    devious: {
+                        "1L": 12.00,
+                        "1.5L": 16.50,
+                        "2L": 20.50,
+                        "3.5L": 24.00
+                    },
+                    face: {
+                        "1L": 12.50,
+                        "1.5L": 18.00,
+                        "2L": 23.50,
+                        "3.5L": 27.00
+                    },
+                    elsewhere: {
+                        "1L": 15.00,
+                        "1.5L": 23.50,
+                        "2L": 29.00,
+                        "3.5L": 35.50
+                    }
+                };
+
+                const priceElement = document.getElementById("price");
+                priceElement.textContent = `$${priceMap[selectedProduct][selectedSize].toFixed(2)}`;
+            }
+
+            // Add event listeners after the page is loaded
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("product").addEventListener("change", updatePrice);
+                document.getElementById("size").addEventListener("change", updatePrice);
+                // Call the updatePrice function initially to set the default price
+                updatePrice();
+            });
+
+            // Function to toggle the sidebar
+            function toggleSidebar() {
+                const sidebar = document.getElementById("sidebar");
+                sidebar.classList.toggle("active");
+            }
+        </script>
     </body>
 </html>
