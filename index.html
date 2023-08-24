@@ -1,228 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBW</title>
-    <link rel="icon" type="image/x-icon" href="Bathtub.webp">
-    <style>
-        /* Common Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-            margin: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MBW</title>
+        <link rel="icon" type="image/x-icon" href="Bathtub.webp">
+        <style>
+            /* Common Styles */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: black;
+                color: white;
+                margin: 0;
+            }
 
-        header {
-            background-color: Gold;
-            color: Black;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            header {
+                background-color: Gold;
+                color: Black;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-        }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                margin: 0;
+            }
 
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: gold;
-            color: black;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+            .cta-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: gold;
+                color: black;
+                text-decoration: none;
+                border-radius: 5px;
+            }
 
-        /* Styling for "Buy Mihir's Bath Water" Section */
-        #purchase-section {
-            background-color: black;
-            color: white;
-            padding: 50px;
-            text-align: center;
-        }
+            /* Styling for "Buy Mihir's Bath Water" Section */
+            #purchase-section {
+                background-color: black;
+                color: white;
+                padding: 50px;
+                text-align: center;
+            }
 
-        #purchase-section h2 {
-            color: gold;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+            #purchase-section h2 {
+                color: gold;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
 
-        #purchase-section form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: center;
-        }
+            #purchase-section form {
+                max-width: 400px;
+                margin: 0 auto;
+                text-align: center;
+            }
 
-        #purchase-section label {
-            display: block;
-            margin-bottom: 5px;
-            color: gold;
-        }
+            #purchase-section label {
+                display: block;
+                margin-bottom: 5px;
+                color: gold;
+            }
 
-        #purchase-section select,
-        #purchase-section input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid gold;
-            background-color: black;
-            color: white;
-            margin-bottom: 15px;
-        }
+            #purchase-section select,
+            #purchase-section input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid gold;
+                background-color: black;
+                color: white;
+                margin-bottom: 15px;
+            }
 
-        #purchase-section button {
-            padding: 10px 20px;
-            background-color: gold;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+            #purchase-section button {
+                padding: 10px 20px;
+                background-color: gold;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
 
-        /* Font for First Heading */
-        .Main-heading {
-            font-family: 'Arial', sans-serif;
-        }
+            /* Font for First Heading */
+            .Main-heading {
+                font-family: 'Arial', sans-serif;
+            }
 
-        /* Styling for "Power of Friendship" Section */
-        .power-of-friendship {
-            background-color: black;
-            color: white;
-            padding: 70px 0;
-            text-align: center;
-        }
+            /* Styling for "Power of Friendship" Section */
+            .power-of-friendship {
+                background-color: black;
+                color: white;
+                padding: 25px 0;
+                text-align: center;
+            }
 
-        .hygiene-importance {
-        background-color: black;
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-        }
+            .hygiene-importance {
+                background-color: black;
+                color: white;
+                padding: 50px 0;
+                text-align: center;
+            }
 
-        /* Styling for Review Section */
-        .reviews {
-            background-color: black;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
+            /* Styling for Review Section */
+            .reviews {
+                background-color: black;
+                color: white;
+                padding: 50px 0;
+                text-align: center;
+            }
 
-        .review {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            padding: 20px;
-            border: 1px solid gold;
-            border-radius: 5px;
-            text-align: left;
-        }
-        
-        /* Styling for Footer */
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+            .review {
+                max-width: 600px;
+                margin: 0 auto 40px;
+                padding: 20px;
+                border: 1px solid gold;
+                border-radius: 5px;
+                text-align: left;
+            }
 
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            font-family: Arial, sans-serif;
-        }
-
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap">
-</head>
-<body>
-    <header>
-        <div class="logo">MBW</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#purchase-section">Shop</a></li>
-            <li><a href="#power-of-friendship">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
-
-    <section class="hero" style="text-align: center; padding: 100px 0;">
-        <h1 class="Main-heading">Welcome</h1>
-        <p>Experience the luxury of handcrafted bathwater products.</p>
-        <a href="#purchase-section" class="cta-button">Shop Now</a>
-    </section>
-
-<section id="purchase-section">
-    <h2>Buy Mihir's Bath Water</h2>
-    <form action="process_order.php" method="post">
-        <label for="product">Select Product:</label>
-        <select id="product" name="product">
-            <option value="devious">Mihir's Devious Bathe Water</option>
-            <option value="face">Mihir's Shave Water (Face)</option>
-            <option value="elsewhere">Mihir's Shave Water (Elsewhere :D)</option>
-            <!-- Add more product options if needed -->
-        </select>
-        <br>
-        <label for="size">Select Size:</label>
-        <select id="size" name="size">
-            <option value="1L">600ml - $12.50</option>
-            <option value="1.5L">1L - $15.50</option>
-            <option value="3L">2L - $20.50</option>
-            <option value="5L">3.5L - $29.50</option>
-        </select>
-        <br>
-        <label for="quantity">Select Quantity:</label>
-        <select id="quantity" name="quantity">
-            <option value="1">x1</option>
-            <option value="2">x2</option>
-            <option value="3">x3</option>
-            <option value="4">x4</option>
-            <option value="5">x5 (max per customer)</option>
-        </select>
-        <br>
-        <button type="submit" class="purchase-button">Add to Cart</button>
-    </form>
-</section>
-
-        
-</section>
+            /* Styling for Footer */
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+            }
 
 
-    <section    id="power-of-friendship" class="power-of-friendship">
-        <div class="power-of-friendship-content">
-            <h2>The Power of Friendship</h2>
-            <p>At Mihir's Bath Water, we believe that friendship is a source of inspiration, joy, and strength. Our products are not just about bathwater; they symbolize the bonds that make life beautiful.</p>
-            <p>Indulge in self-care, share our products with friends, and celebrate the magic of friendship.</p>
-        </div>
-    </section>
-    <section class="hygiene-importance">
-    <div class="hygiene-content">
-        <h2>The Importance of Good Hygiene</h2>
-        <p>At Mihir's Bath Water, we prioritize not only the luxurious experience but also the significance of good hygiene. Maintaining proper hygiene is essential for overall health and well-being.</p>
-        <p>Our handcrafted bathwater products are designed to not only provide a delightful bathing experience but also to promote cleanliness and freshness. By using our products, you're taking a step towards a healthier lifestyle.</p>
-        <p>Remember, good hygiene not only keeps you feeling great but also contributes to your confidence and self-esteem.</p>
-    </div>
-</section>
+
+            /* Existing styles ... */
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                margin: 0;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: black;
+                /* Set the text color to black */
+                font-weight: bold;
+                font-size: 16px;
+                transition: color 0.3s ease;
+                /* Add a smooth color transition effect */
+            }
+
+            .nav-links a:hover {
+                color: white;
+                /* Change the text color on hover */
+            }
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                /* Center the content horizontally */
+                align-items: center;
+                /* Center the content vertically */
+                height: 33px;
+                /* Adjust the height as needed */
+            }
+
+            .logo-image {
+                width: 40px;
+                /* Adjust the width as needed */
+                height: 40px;
+                /* Adjust the height as needed */
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#">
+                <img src="Bathtub.webp" alt="Bathtub Logo" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#purchase-section">Shop</a></li>
+                <li><a href="#power-of-friendship">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="logo">
+                </div>
+            </ul>
+        </header>
+
+        <section class="hero" style="text-align: center; padding: 100px 0;">
+            <h1 class="Main-heading">Welcome</h1>
+            <p>Experience the luxury of handcrafted bathwater products.</p>
+            <a href="#purchase-section" class="cta-button">Shop Now</a>
+        </section>
 
 
-    <section class="reviews">
-        <h2>Customer Reviews</h2>
-        <div class="review">
-            <p>"I absolutely love bath water products. They're like a luxurious treat for my skin!"</p>
-            <p><em>- Emily W.</em></p>
-        </div>
-        <div class="review">
-            <p>"Bathing in bath water has transformed my bathing routine. I can't get enough of the amazing scent."</p>
-            <p><em>- James M.</em></p>
-        </div>
-    </section>
+        <section id="power-of-friendship" class="power-of-friendship">
+            <div class="power-of-friendship-content">
+                <h2>The Power of Friendship</h2>
+                <p>At Mihir's Bath Water, we believe that friendship is a source of inspiration, joy, and strength. Our products are not just about bathwater; they symbolize the bonds that make life beautiful.</p>
+                <p>Indulge in self-care, share our products with friends, and celebrate the magic of friendship.</p>
+            </div>
+        </section>
+        <section class="hygiene-importance">
+            <div class="hygiene-content">
+                <h2>The Importance of Good Hygiene</h2>
+                <p>At Mihir's Bath Water, we prioritize not only the luxurious experience but also the significance of good hygiene. Maintaining proper hygiene is essential for overall health and well-being.</p>
+                <p>Our handcrafted bathwater products are designed to not only provide a delightful bathing experience but also to promote cleanliness and freshness. By using our products, you're taking a step towards a healthier lifestyle.</p>
+                <p>Remember, good hygiene not only keeps you feeling great but also contributes to your confidence and self-esteem.</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2023 Mihir's Bath Water Shop. All rights reserved.</p>
-    </footer>
-</body>
+
+
+        <section id="purchase-section">
+            <h2>Buy Mihir's Bath Water</h2>
+            <form action="process_order.php" method="post">
+                <label for="product">Select Product:</label>
+                <select id="product" name="product">
+                    <option value="devious">Mihir's Devious Bathe Water</option>
+                    <option value="face">Mihir's Shave Water (Face shave)</option>
+                    <option value="elsewhere">Mihir's Shave Water (Elsewhere shave :D)</option>
+                    <!-- Add more product options if needed -->
+                </select>
+                <br>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="1L">600ml - $12.50</option>
+                    <option value="1.5L">1L - $15.50</option>
+                    <option value="3L">2L - $20.50</option>
+                    <option value="5L">3.5L - $29.50</option>
+                </select>
+                <br>
+                <label for="quantity">Select Quantity:</label>
+                <select id="quantity" name="quantity">
+                    <option value="1">x1</option>
+                    <option value="2">x2</option>
+                    <option value="3">x3</option>
+                    <option value="4">x4</option>
+                    <option value="5">x5 (max per customer)</option>
+                </select>
+                <br>
+                <button type="submit" class="purchase-button">Add to Cart</button>
+            </form>
+        </section>
+
+
+        </section>
+
+
+
+
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>"I absolutely love bath water products. They're like a luxurious treat for my skin!"</p>
+                <p><em>- Oliver F.</em></p>
+            </div>
+            <div class="review">
+                <p>"Bathing in bath water has transformed my bathing routine. I can't get enough of the amazing scent."</p>
+                <p><em>- Jye J.</em></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Mihir's Bath Water Shop. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
