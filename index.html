@@ -6,9 +6,9 @@
         <title>MBW</title>
         <link rel="icon" type="image/x-icon" href="Bathtub.webp">
         <script>
-        function refreshPage() {
-            location.reload();
-        }
+            function refreshPage() {
+                location.reload();
+            }
         </script>
 
         <style>
@@ -161,29 +161,94 @@
                 /* Change the text color on hover */
             }
 
-            .logo {
-                display: flex;
-                justify-content: center;
-                /* Center the content horizontally */
-                align-items: center;
-                /* Center the content vertically */
-                height: 33px;
-                /* Adjust the height as needed */
-            }
+            
 
             .logo-image {
                 width: 40px;
                 /* Adjust the width as needed */
                 height: 40px;
                 /* Adjust the height as needed */
+            }
+
+            .sidebar {
+                position: fixed;
+                top: 0;
+                right: -250px;
+                width: 250px;
+                height: 100%;
+                background-color: black;
+                color: white;
+                transition: right 0.3s ease;
+                overflow-y: auto;
+                padding-top: 20px;
+            }
+
+            .sidebar.active {
+                right: 0;
+            }
+
+                /* Button Styles */
+            .burger-btn {
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+
+            .burger-icon {
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                position: relative;
+            }
+
+            .burger-icon::before,
+            .burger-icon::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: black;
+                transition: transform 0.3s ease;
+            }
+
+            .burger-icon::before {
+                top: -8px;
+            }
+
+            .burger-icon::after {
+                bottom: -8px;
+            }
+
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sidebar li {
+                padding: 10px 0;
+                text-align: center;
+            }
+
+             .content {
+            margin-left: 250px; /* Adjust the value to match sidebar width */
+            transition: margin-left 0.3s ease;
+            padding-top: 60px; /* Prevent content from being hidden behind header */
+            }
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap">
     </head>
+   
+   
     <body>
         <header>
-            <div class="logo">
+            <div class="logo" onclick="toggleSidebar()">
                 <a href="#">
-                <img src="Bathtub.webp" alt="Bathtub Logo" class="logo-image" onclick="refreshPage()">
+                    <img src="Bathtub.webp" alt="Bathtub Logo" class="logo-image" onclick="refreshPage()">
                 </a>
             </div>
             <ul class="nav-links">
@@ -191,10 +256,34 @@
                 <li><a href="#purchase-section">Shop</a></li>
                 <li><a href="#power-of-friendship">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <div class="logo">
-                </div>
-            </ul>
+            </ul>       
+                    <!-- ... (your existing header content) ... -->
+                    <div class="logo" onclick="toggleSidebar()">
+                        <img src="Bathtub.webp" alt="Bathtub Logo" class="logo-image">
+                    </div>
+            
+                    <!-- Burger Button -->
+            <div class="burger-btn" onclick="toggleSidebar()">
+                <div class="burger-icon"></div>
+            </div>
+                    <!-- ... (your existing header content) ... -->
+
         </header>
+
+                    <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#purchase-section">Shop</a></li>
+                    <li><a href="#power-of-friendship">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+           <div class="content">
+           </div>
+
+
 
         <section class="hero" style="text-align: center; padding: 100px 0;">
             <h1 class="Main-heading">Welcome</h1>
@@ -254,8 +343,12 @@
         </section>
 
 
-        </section>
-
+        <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+        </script>
 
 
 
