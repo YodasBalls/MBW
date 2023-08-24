@@ -5,11 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MBW</title>
         <link rel="icon" type="image/x-icon" href="Bathtub.webp">
-        <script>
-            function refreshPage() {
-                location.reload();
-            }
-        </script>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -253,8 +248,15 @@
 
     <body>
         <header>
+            </div>
+            <button class="sidebar-toggle-btn" onclick="toggleSidebar()">
+                <div class="burger-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </button>
             <div class="logo">
-                <a href="#">
+                <a href="#" onclick="refreshPage()">
                     <img src="Bathtub.webp" alt="Bathtub Logo" class="logo-image">
                 </a>
             </div>
@@ -265,7 +267,7 @@
                 </div>
             </button>
         </header>
-            
+
 
         <div class="sidebar" id="sidebar">
             <ul>
@@ -386,6 +388,10 @@
             function toggleSidebar() {
                 const sidebar = document.getElementById("sidebar");
                 sidebar.classList.toggle("active");
+            }
+
+            function refreshPage() {
+                location.reload();
             }
         </script>
     </body>
