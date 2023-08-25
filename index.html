@@ -14,7 +14,7 @@
             }
 
             header {
-                background-color: Gold;
+                background-color: green;
                 color: Black;
                 padding: 10px;
                 display: flex;
@@ -32,7 +32,7 @@
             .cta-button {
                 display: inline-block;
                 padding: 10px 20px;
-                background-color: gold;
+                background-color: green;
                 color: black;
                 text-decoration: none;
                 border-radius: 5px;
@@ -47,7 +47,7 @@
             }
 
             #purchase-section h2 {
-                color: gold;
+                color: green;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
@@ -61,14 +61,14 @@
             #purchase-section label {
                 display: block;
                 margin-bottom: 5px;
-                color: gold;
+                color: white;
             }
 
             #purchase-section select,
             #purchase-section input {
                 width: 100%;
                 padding: 8px;
-                border: 1px solid gold;
+                border: 1px solid-green;
                 background-color: black;
                 color: white;
                 margin-bottom: 15px;
@@ -76,24 +76,56 @@
 
             #purchase-section button {
                 padding: 10px 20px;
-                background-color: gold;
+                background-color: green;
                 color: black;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
             }
 
-            /* Font for First Heading */
             .Main-heading {
                 font-family: 'Arial', sans-serif;
             }
 
-            /* Styling for "Power of Friendship" Section */
+            .spotify-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 135px;
+                /* Adjust the height as needed */
+                margin: auto;
+            }
+
+            .mihirs-routine {
+                background-color: black;
+                color: white;
+                padding: 25px 0;
+                text-align: center;
+            }
+
+            .mihirs-routine-content {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .mihirs-routine h2 {
+                color: green;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
             .power-of-friendship {
                 background-color: black;
                 color: white;
                 padding: 25px 0;
                 text-align: center;
+            }
+
+            .power-of-friendship h2 {
+                color: green;
+                font-size: 28px;
+                margin-bottom: 20px;
             }
 
             .hygiene-importance {
@@ -103,7 +135,20 @@
                 text-align: center;
             }
 
-            /* Styling for Review Section */
+            .hygiene-importance h2 {
+                color: green;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .reviews h2 {
+                color: green;
+                /* Change the color to green */
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+
             .reviews {
                 background-color: black;
                 color: white;
@@ -115,21 +160,18 @@
                 max-width: 600px;
                 margin: 0 auto 40px;
                 padding: 20px;
-                border: 1px solid gold;
+                border: 1px solid white;
+                /* Change the border color to white */
                 border-radius: 5px;
                 text-align: left;
             }
 
-            /* Styling for Footer */
             footer {
                 background-color: black;
                 color: white;
                 text-align: center;
                 padding: 20px 0;
             }
-
-
-
 
             .logo-image {
                 width: 50px;
@@ -242,6 +284,7 @@
                 border: none;
                 cursor: pointer;
                 z-index: 9999;
+            }
         </style>
     </head>
 
@@ -286,6 +329,20 @@
             <p>Experience the luxury of handcrafted bathwater products.</p>
             <a href="#purchase-section" class="cta-button">Shop Now</a>
         </section>
+
+        <div class="spotify-content">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OJxI8lIWRqBvouJxW1nzN?utm_source=generator" width="35%" height="92" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <section class="mihirs-routine">
+            <div class="power-of-friendship-content">
+                <h2>Mihir's Routine</h2>
+                <p>Here's a glimpse into Mihir's daily routine. From productive mornings to relaxing evenings, follow along!</p>
+                <p>Start the day with a refreshing bath using Mihir's Bath Water. It sets the tone for a successful day ahead.</p>
+                <p>In the evening, unwind with a soothing bath enriched with the power of friendship and self-care.</p>
+            </div>
+        </section>
+
 
         <section id="power-of-friendship" class="power-of-friendship">
             <div class="power-of-friendship-content">
