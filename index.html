@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -47,7 +47,7 @@
             }
 
             #purchase-section h2 {
-                color: green;
+                color: #66FF00;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
@@ -85,6 +85,7 @@
 
             .Main-heading {
                 font-family: 'Arial', sans-serif;
+                color: #66FF00;
             }
 
             .spotify-content {
@@ -110,7 +111,7 @@
             }
 
             .mihirs-routine h2 {
-                color: green;
+                color: #66FF00;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
@@ -122,8 +123,14 @@
                 text-align: center;
             }
 
+            .power-of-friendship-content {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
             .power-of-friendship h2 {
-                color: green;
+                color: #66FF00;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
@@ -135,14 +142,20 @@
                 text-align: center;
             }
 
+            .hygiene-importance-content {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
             .hygiene-importance h2 {
-                color: green;
+                color: #66FF00;
                 font-size: 28px;
                 margin-bottom: 20px;
             }
 
             .reviews h2 {
-                color: green;
+                color: #66FF00;
                 /* Change the color to green */
                 font-size: 28px;
                 margin-bottom: 20px;
@@ -186,7 +199,7 @@
                 right: -250px;
                 width: 250px;
                 height: 100%;
-                background-color: gold;
+                background-color: green;
                 color: white;
                 transition: right 0.3s ease;
                 overflow-y: auto;
@@ -201,7 +214,6 @@
                 width: 200%;
                 height: 100%;
                 background-color: transparent;
-                /* Remove the white background color */
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -211,19 +223,9 @@
             .line {
                 width: 100%;
                 height: 15px !important;
-                background-color: black;
+                background-color: white;
                 transition: transform 0.3s ease;
                 margin: 3px 0 !important;
-            }
-
-            .burger-icon::before,
-            .burger-icon::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 15px;
-                background-color: black;
-                transition: transform 0.3s ease;
             }
 
             .burger-icon::before {
@@ -316,7 +318,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#purchase-section">Shop</a></li>
-                <li><a href="#power-of-friendship">About Us</a></li>
+                <li><a href="#mihirs-routine">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -334,8 +336,8 @@
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OJxI8lIWRqBvouJxW1nzN?utm_source=generator" width="35%" height="92" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
-        <section class="mihirs-routine">
-            <div class="power-of-friendship-content">
+        <section id="mihirs-routine" class="mihirs-routine">
+            <div class="mihirs-routine-content">
                 <h2>Mihir's Routine</h2>
                 <p>Here's a glimpse into Mihir's daily routine. From productive mornings to relaxing evenings, follow along!</p>
                 <p>Start the day with a refreshing bath using Mihir's Bath Water. It sets the tone for a successful day ahead.</p>
@@ -352,8 +354,8 @@
             </div>
         </section>
 
-        <section class="hygiene-importance">
-            <div class="hygiene-content">
+        <section id="hygene-importance" class="hygiene-importance">
+            <div class="hygiene-importance-content">
                 <h2>The Importance of Good Hygiene</h2>
                 <p>At Mihir's Bath Water, we prioritize not only the luxurious experience but also the significance of good hygiene. Maintaining proper hygiene is essential for overall health and well-being.</p>
                 <p>Our handcrafted bathwater products are designed to not only provide a delightful bathing experience but also to promote cleanliness and freshness. By using our products, you're taking a step towards a healthier lifestyle.</p>
@@ -395,6 +397,10 @@
             <div class="review">
                 <p>"Bathing in bath water has transformed my bathing routine. I can't get enough of the amazing scent."</p>
                 <p><em>- Jye J.</em></p>
+            </div>
+            <div class="review">
+                <p>"How good are these products! Both me and Taj use them on the daily."</p>
+                <p><em>- Michael W.</em></p>
             </div>
         </section>
 
